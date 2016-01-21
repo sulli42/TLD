@@ -82,7 +82,7 @@ def contourPlot(data, path, save=True):
     plt.grid(False)
     plt.set_cmap('terrain')
     if(save):
-        plt.savefig(path + "TM_map_contour.png",dpi=300)
+        plt.savefig(path + "TM_map_contour.png",dpi=150)
     
 def scatterPlot(data, path, save=True):
     fig = plt.figure()
@@ -93,7 +93,7 @@ def scatterPlot(data, path, save=True):
     plt.grid(True)
     plt.set_cmap('terrain')
     if(save):
-        plt.savefig(path + "TM_map_path.png",dpi=300)
+        plt.savefig(path + "TM_map_path.png",dpi=150)
 
 
 #### 1.3 - User routines
