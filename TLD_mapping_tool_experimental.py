@@ -72,11 +72,11 @@ def deleteScreenshots(path):
 
 def contourPlot(data, path, save=True):
     fig = plt.figure()
-    xi = linspace(min(data[:,0]),max(data[:,0]),222) 
-    yi = linspace(min(data[:,2]),max(data[:,2]),222)
+    xi = linspace(min(data[:,0]),max(data[:,0]),400) 
+    yi = linspace(min(data[:,2]),max(data[:,2]),400)
     zi = griddata(data[:,0],data[:,2],data[:,1], xi,yi, interp='linear') 
     #zi = nd.gaussian_filter(zi, sigma=0.6, order=0)
-    plt.contour (xi,yi,zi,40,linewidths=0.25,colors='blue') 
+    plt.contour (xi,yi,zi,35,linewidths=0.25,colors='red') 
     plt.contourf(xi,yi,zi,0,);
     plt.colorbar()  
     plt.grid(False)
