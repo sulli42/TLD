@@ -32,7 +32,7 @@ import matplotlib.pyplot as plt
 from numpy import linspace, meshgrid
 from matplotlib.mlab import griddata
 from pylab import rcParams
-rcParams['figure.figsize'] = 12,12
+rcParams['figure.figsize'] = 12,10
 #import scipy.ndimage as nd
 
 
@@ -76,8 +76,8 @@ def contourPlot(data, path, save=True):
     yi = linspace(min(data[:,2]),max(data[:,2]),111)
     zi = griddata(data[:,0],data[:,2],data[:,1], xi,yi, interp='linear') 
     #zi = nd.gaussian_filter(zi, sigma=0.6, order=0)
-    plt.contour (xi,yi,zi,41,linewidths=1,colors='black') 
-    plt.contourf(xi,yi,zi,82);
+    plt.contour (xi,yi,zi,82,linewidths=1,colors='black') 
+    plt.contourf(xi,yi,zi,164);
     plt.colorbar()  
     plt.grid(True)
     plt.set_cmap('terrain')
