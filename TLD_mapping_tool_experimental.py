@@ -78,11 +78,11 @@ def contourPlot(data, path, save=True):
     #zi = nd.gaussian_filter(zi, sigma=0.6, order=0)
     plt.contour (xi,yi,zi,50,linewidths=0.5,colors='black') 
     plt.contourf(xi,yi,zi,0,colors='white');
-    plt.colorbar(False)  
+    plt.colorbar()  
     plt.grid(True)
     plt.set_cmap('terrain')
     if(save):
-        plt.savefig(path + "TM_map_contour.png",dpi=300)
+        plt.savefig(path + "TM_map_contour.png",dpi=150)
     
 def scatterPlot(data, path, save=True):
     fig = plt.figure()
@@ -93,7 +93,7 @@ def scatterPlot(data, path, save=True):
     plt.grid(True)
     plt.set_cmap('terrain')
     if(save):
-        plt.savefig(path + "TM_map_path.png",dpi=300)
+        plt.savefig(path + "TM_map_path.png",dpi=150)
 
 
 #### 1.3 - User routines
