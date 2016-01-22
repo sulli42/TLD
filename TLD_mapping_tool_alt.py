@@ -72,14 +72,14 @@ def deleteScreenshots(path):
 
 def contourPlot(data, path, save=True):
     fig = plt.figure()
-    xi = linspace(min(data[:,0]),max(data[:,0]),200) 
-    yi = linspace(min(data[:,2]),max(data[:,2]),200)
+    xi = linspace(min(data[:,0]),max(data[:,0]),111 
+    yi = linspace(min(data[:,2]),max(data[:,2]),111)
     zi = griddata(data[:,0],data[:,2],data[:,1], xi,yi, interp='linear') 
     #zi = nd.gaussian_filter(zi, sigma=0.6, order=0)
-    plt.contour (xi,yi,zi,40,linewidths=0.5,colors='saddlebrown') 
-    plt.contourf(xi,yi,zi,80,);
+    plt.contour (xi,yi,zi,41,linewidths=0.5,colors='black') 
+    plt.contourf(xi,yi,zi,82,);
     plt.colorbar()  
-    plt.grid(False)
+    plt.grid(True)
     plt.set_cmap('terrain')
     if(save):
         plt.savefig(path + "TM_map_contour.png",dpi=150)
